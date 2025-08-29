@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/bfhl.py": {
-      "runtime": "@vercel/python@3.0.0"
+      "runtime": "@vercel/python@3.11"
     }
   },
   "routes": [
@@ -9,6 +9,12 @@
       "src": "/bfhl",
       "methods": ["POST", "OPTIONS"],
       "dest": "/api/bfhl.py"
+    }
+  ],
+  "builds": [
+    {
+      "src": "api/bfhl.py",
+      "use": "@vercel/python"
     }
   ]
 }
